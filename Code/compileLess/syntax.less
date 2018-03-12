@@ -1,0 +1,187 @@
+// 第一行都是变量表
+// 导入格式: @impor url
+@import './setting.less';
+
+// 单行注释(静默注释)  不会编译到css中
+
+/*
+  多行注释 会编译到css中
+*/
+
+// 声明变量
+// 格式: @变量名: 变量值
+// 声明变量的好处在于后期维护代码
+
+// @fontSize: 24px;
+// @bgColor: #ccc;
+// @white: #fff;
+// @normalSize: 20px 30px 40px 50px;
+
+body {
+  background-color:@bgColor;
+}
+
+// main {
+//   color:@bgColor;
+//   background-color: @white;
+//   font-size:@fontSize;
+//   padding:@normalSize;
+// }
+// aside {
+//   font-size:@fontSize;
+//   margin:@normalSize;
+// }
+
+// 嵌套
+
+// .jdm-extra-content {
+//   width: 100%;
+// }
+
+// .jdm-extra-content ul {
+//   width: 100%;
+//   overflow: hidden;
+// }
+
+// .jdm-extra-content li {
+//   float: left;
+//   overflow: hidden;
+// }
+
+// .jdm-extra-content a {
+//   display: block;
+// }
+
+// .jdm-extra-content img {
+//   width: 100%;
+//   vertical-align: middle;
+// }
+
+// .jdm-extra-content {
+//   width: 100%;
+
+//   ul {
+//     width: 100%;
+    
+//   }
+//   li {
+//     float: left;
+//     overflow: hidden;
+//   }
+
+//   a {
+//     display: block;
+//   }
+
+//   img {
+//     width: 100%;
+//   }
+ 
+// }
+
+// 父选择器 & 直接子元素 >
+
+// .jdm-extra-content {
+  // > ul {}
+
+//   // ul {}
+//   background:pink;
+// }
+
+// .jdm-extra-content:hover {
+//   background:red;
+// }
+
+// .jdm-extra-content {
+//   > ul {
+//     width: 100%;
+//   }
+
+//   // ul {}
+//   background:pink;
+
+//   &:hover {
+//     background:red;
+//   }
+// }
+
+
+// 混合器(mixin 函数)
+// function 函数名(参数){}
+// .函数名(参数){}
+
+// 给a标签添加过状态
+
+// a {
+//   color: #333;
+// }
+
+// a:hover {
+//   color: #666;
+// }
+
+// a:active {
+//   color: #9999;
+// }
+
+
+.change(@normal:red,@hover:green,@active:blue){
+  color: @normal;
+  &:hover {
+    color: @hover;
+  }
+
+  &:active {
+    color: @active;
+  }
+}
+
+a {
+  // .change(red,green,blue);
+  .change(#ccc,#aaa,#ddd);
+}
+
+button {
+  .change(pink,hotpink,lightpink);
+}
+
+// 格式: .函数名(参数) {}
+// 无参数函数
+// 有参数函数必传
+// 有参数有默认值的函数
+
+
+// 四则运算
+@width: 20px;
+@height: 30px;
+// calc(); 
+div {
+  // 规范: 运算符两边要有空格
+  width: @width + 2;
+  height: @height * 2;
+  border-width: @width - 10;
+  padding: @width / 2;
+}
+
+
+// 导入其他less文件
+// 为什么要导入其他less文件
+
+
+
+// 继承
+// 格式: &:extend(选择器)
+// less的继承 是一把双刃剑
+
+aside {
+  font-size:24px;
+  margin:20px 30px 40px 50px;
+}
+
+main {
+  color:#ccc;
+  background-color:#fff;
+  // font-size:24px;
+  // padding:20px 30px 40px 50px;
+  &:extend(aside);
+}

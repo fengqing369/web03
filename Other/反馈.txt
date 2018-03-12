@@ -1,0 +1,33 @@
+老师那个地理信息API感觉听的很迷糊啊,什么经度纬度那个,北京海拔不为0,没听懂...拖拽在讲讲吧老师
+
+  // 检测这个浏览器是否支持地理定位
+      if(window.navigator.geolocation) {
+      // 获取地理定位信息
+      window.navigator.geolocation.getCurrentPosition(function(position){
+        position.coords.纬度
+        position.coords.经度
+      },function(error){
+        1.用户禁止浏览器获取位置
+        2.定位服务在国外
+        3.超时
+      })
+      }
+
+  // 用的百度地图
+
+
+  div
+    h1
+    li
+    li
+    li
+    选择到第一个li
+    li:nth-child(2)
+    
+
+
+    多行出现省略号
+
+      display: -webkit-box;
+      -webkit-box-orgient: vertical
+      -webkit-line-clamp: 几行就写几 但是要大于等于2

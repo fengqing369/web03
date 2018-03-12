@@ -1,0 +1,18 @@
+
+
+/* iphone5 */
+@media screen and (width: 320px) {
+/* 样式 */
+
+body {
+  background-color: red;
+}
+
+}
+
+/* iphone6 */
+@media screen and (width: 375px) {
+  body {
+    background-color: pink;
+  }
+}

@@ -1,0 +1,176 @@
+/* reset */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+  margin: 0;
+  padding: 0;
+}
+header,
+footer,
+section,
+article,
+aside,
+nav,
+hgroup,
+address,
+figure,
+figcaption,
+menu,
+details {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th {
+  text-align: left;
+  font-weight: normal;
+}
+html,
+body,
+fieldset,
+img,
+iframe,
+abbr {
+  border: 0;
+}
+i,
+cite,
+em,
+var,
+address,
+dfn {
+  font-style: normal;
+}
+[hidefocus],
+summary {
+  outline: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+@media screen and (device-width: 320px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (device-width: 375px) {
+  html {
+    font-size: 18.75px;
+  }
+}
+@media screen and (device-width: 360px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (device-width: 768px) {
+  html {
+    font-size: 38.4px;
+  }
+}
+body {
+  background-color: #f7f4f1;
+}
+header {
+  position: relative;
+  width: 100%;
+  height: 2.75rem;
+  background-color: #ff9b25;
+}
+header i {
+  position: absolute;
+  top: 0.875rem;
+  left: 0.625rem;
+  width: 0.625rem;
+  height: 1rem;
+  background-image: url("../image/back.png");
+  background-size: 0.625rem 1rem;
+}
+header span {
+  line-height: 2.75rem;
+  margin-left: 1.75rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+main {
+  width: 100%;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+}
+main .qcyh {
+  width: 100%;
+}
+main .qcyh-top {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 0.875rem;
+}
+main .qcyh-top h4 {
+  float: left;
+  line-height: 2.5rem;
+  font-weight: normal;
+  color: #000000;
+}
+main .qcyh-top span {
+  float: right;
+  line-height: 2.5rem;
+  color: #888888;
+}
+main .qcyh-bottom {
+  position: relative;
+  width: 18.5rem;
+  height: 7rem;
+  border: 3px dashed #dedede;
+  margin-top: 3px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  text-align: center;
+}
+main .qcyh-bottom i {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.125rem;
+  margin-bottom: 0.4375rem;
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url("../image/add.png");
+  background-size: 3.25rem 3.25rem;
+}
+main .qcyh-bottom span {
+  font-size: 0.8125rem;
+  color: #aeaeae;
+}

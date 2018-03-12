@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 目标: 就是把box 适配到 常见的iphone 5  iphone 6手机上 */
+
+    /* 1. 通过切图工具 我们得知  box在设计图(640px)上的大小是 16*16px */
+
+    /* 2. 把设计图分成20份   1份 = 32px */
+
+    /* 3. iphone5 的宽度 = 320   iphone6 的宽度= 375 */
+
+    /* 4.使用媒体查询 */
+
+    /* iPhone 5 */
+
+    @media screen and (width: 320px) {
+      html {
+        /* 在320宽的屏幕中 一份是 16px */
+        font-size: 16px
+      }
+    }
+
+    /* iPhone 6 */
+    @media screen and (width: 375px) {
+      html {
+        /* 在320宽的屏幕中 一份是 16px */
+        font-size: calc(375px / 20);
+      }
+    }
+
+    /* 三星 */
+    @media screen and (width: 360px) {
+      html {
+        /* 在360宽的屏幕中 一份是 18px */
+        font-size: 18px;
+      }
+    }
+
+    .box {
+      /* 在某一屏幕中的大小 = 元素的尺寸/32* 屏幕中一份的大小 */
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

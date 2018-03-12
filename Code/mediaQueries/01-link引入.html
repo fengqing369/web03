@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- 视口设置一定要写 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- iphone 3GS设备像素  320*480 -->
+  <!-- iphone 4            640*960 -->
+  <!-- 320 375  也就是逻辑像素  -->
+
+
+  <!-- 这里的width是理想视口呢还是布局视口呢? -->
+
+  <!-- iphone5  width: 320px; 想要让不同的设备显示不同的背景 要进行特征过滤 -->
+  <!-- screen 显示屏 显示设备 
+       print  打印设备 - 很少用
+  -->
+  <link rel="stylesheet" href="./link-ipone5.css" media="screen and (width: 320px)">
+  <!-- iphone6 width: 375px;-->
+  <link rel="stylesheet" href="./link-ipone6.css" media="screen and (width: 375px)">
+</head>
+<body>
+  
+</body>
+</html>
